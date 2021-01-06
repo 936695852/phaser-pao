@@ -11,13 +11,13 @@ module.exports = {
   entry: {
     app: './src/index.js',
   },
-  // externalsPresets: {
-  //   web: true,
-  // },
-  // externalsType: 'script',
-  // externals: {
-  //   phaser: ['https://cdn.bootcdn.net/ajax/libs/phaser/3.50.0-beta.12/phaser.min.js', 'Phaser'],
-  // },
+  externalsPresets: {
+    web: true,
+  },
+  externalsType: 'script',
+  externals: {
+    phaser: ['https://cdn.bootcdn.net/ajax/libs/phaser/3.50.0-beta.12/phaser.min.js', 'Phaser'],
+  },
   output: {
     filename: 'js/[name].[contenthash:8].js',
     path: resolve(__dirname, 'dist'),
