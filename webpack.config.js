@@ -40,7 +40,7 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           // 优先级
           priority: -10,
-          chunks: 'initial'
+          chunks: 'initial',
         },
         common: {
           name: 'chunk-common',
@@ -49,8 +49,8 @@ module.exports = {
           chunks: 'initial',
           // 如果重复 就会复用
           reuseExistingChunk: true,
-        }
-      }
+        },
+      },
     },
     minimizer: [new TerserWebpackPlugin({}), new OptimizeCssAssetsWebpackPlugin({})],
   },
@@ -149,7 +149,7 @@ module.exports = {
     port: 9000,
     open: true,
     hot: true,
-    // clientLogLevel: 'none',
-    quiet: true,
+    clientLogLevel: 'none',
+    // quiet: true,
   },
 }

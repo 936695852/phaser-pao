@@ -3,9 +3,9 @@ import 'normalize.css'
 import './style/index.scss'
 
 import GameScene from './scenes/game'
-import LoadScene from './scenes/load'
+import PreloadScene from './scenes/preload '
 
-const config = {
+export default new Phaser.Game({
   type: Phaser.AUTO,
   width: 800,
   height: 600,
@@ -19,11 +19,9 @@ const config = {
       debug: true,
     },
   },
-  scene: [ GameScene],
+  scene: [PreloadScene, GameScene],
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-}
-
-export default new Phaser.Game(config)
+})
