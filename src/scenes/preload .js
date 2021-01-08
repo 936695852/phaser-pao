@@ -6,14 +6,13 @@ export default class PreloadScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('tiles', 'assets/tiles/dungeon_tiles.png')
-    this.load.tilemapTiledJSON('dungeon', 'assets/tiles/dungeon_01.json')
-
-    const percentText = this.add.text(400, 200, '0%', {
-      font: '16px monospace',
-      color: '#fff',
-      align: 'center',
-    })
+    const percentText = this.add
+      .text(400, 220, '0%', {
+        font: '16px monospace',
+        color: '#fff',
+        align: 'center',
+      })
+      .setOrigin(0.5, 0.5)
 
     const assetText = this.add
       .text(400, 350, '', {
@@ -50,6 +49,11 @@ export default class PreloadScene extends Phaser.Scene {
       percentText.destroy()
       assetText.destroy()
     })
+
+    // load all assets tile sprites
+    this.load.image('tiles', 'assets/tiles/dungeon_tiles.png')
+    this.load.tilemapTiledJSON('dungeon', 'assets/tiles/dungeon_01.json')
+    this.load.atlas('faune', 'assets/character/faune.png', 'assets/character/faune.json')
   }
 
   create() {

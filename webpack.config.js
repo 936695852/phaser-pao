@@ -16,7 +16,7 @@ module.exports = {
   },
   externalsType: 'script',
   externals: {
-    phaser: ['https://cdn.bootcdn.net/ajax/libs/phaser/3.50.0-beta.12/phaser.min.js', 'Phaser'],
+    phaser: ['https://cdn.jsdelivr.net/gh/photonstorm/phaser@3.50.0/dist/phaser.min.js', 'Phaser'],
   },
   output: {
     filename: 'js/[name].[contenthash:8].js',
